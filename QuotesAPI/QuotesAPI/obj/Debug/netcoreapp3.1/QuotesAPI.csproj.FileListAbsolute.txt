@@ -109,3 +109,5 @@ F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\bin\Debug\netcoreapp3.1\runtimes\
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\QuotesAPI.MvcApplicationPartsAssemblyInfo.cache
+F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll

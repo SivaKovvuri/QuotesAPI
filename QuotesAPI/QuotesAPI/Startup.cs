@@ -31,6 +31,8 @@ namespace QuotesAPI
             services.AddDbContext<QuotesDbContext>(
                 options => options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocaldb;Initial Catalog=QuotesDB")
                 );
+            //Adding Xml Formatters
+            services.AddMvc().AddXmlSerializerFormatters();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
