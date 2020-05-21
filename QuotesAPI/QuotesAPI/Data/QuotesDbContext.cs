@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using QuotesAPI.Models;
+//using QuotesAPI.Models;
 
 namespace QuotesAPI.Data
 {
@@ -13,6 +13,6 @@ namespace QuotesAPI.Data
         {
 
         }
-        public DbSet<QuotesAPI.Models.Quote> Quote { get; set; }
+        ///public DbSet<QuotesAPI.Models.Quote> Quote { get; set; }
     }
 }

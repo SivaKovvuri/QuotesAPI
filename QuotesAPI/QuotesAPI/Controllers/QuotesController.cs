@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using QuotesAPI.Data;
 using QuotesAPI.Models;
 
 namespace QuotesAPI.Controllers
@@ -14,9 +13,9 @@ namespace QuotesAPI.Controllers
     public class QuotesController : ControllerBase
     {
 
-        private QuotesDbContext _quotesDbContext;
+        private QuotesDBContext _quotesDbContext;
 
-        public QuotesController(QuotesDbContext quotesDbContext)
+        public QuotesController(QuotesDBContext quotesDbContext)
         {
             _quotesDbContext = quotesDbContext;
         }

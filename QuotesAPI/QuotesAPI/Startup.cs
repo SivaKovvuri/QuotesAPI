@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using QuotesAPI.Data;
+using QuotesAPI.Models;
 
 namespace QuotesAPI
 {
@@ -28,7 +28,7 @@ namespace QuotesAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<QuotesDbContext>(
+            services.AddDbContext<QuotesDBContext>(
                 options => options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocaldb;Initial Catalog=QuotesDB")
                 );
             //Adding Xml Formatters
@@ -36,7 +36,7 @@ namespace QuotesAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,QuotesDbContext quotesDbContext)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -53,7 +53,7 @@ namespace QuotesAPI
             {
                 endpoints.MapControllers();
             });
-            quotesDbContext.Database.EnsureCreated();
+            //quotesDbContext.Database.EnsureCreated();
         }
     }
 }
