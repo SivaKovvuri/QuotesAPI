@@ -75,7 +75,7 @@ namespace QuotesAPI.Controllers
             var entity = _quotesDbContext.Quote.Find(id);
             if (entity == null)
             {
-                return StatusCode(StatusCodes.Status404NotFound);
+                return NotFound("Record Not Found!!");
             }
             _quotesDbContext.Quote.Remove(entity);
             _quotesDbContext.SaveChanges();
