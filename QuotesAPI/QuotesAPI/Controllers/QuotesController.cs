@@ -23,46 +23,64 @@ namespace QuotesAPI.Controllers
 
         // GET: api/Quotes
         [HttpGet]
-        public IEnumerable<Quote> Get()
+        public IActionResult Get()
         {
-            return _quotesDbContext.Quote;
+            // return Ok(_quotesDbContext.Quote);
+            return StatusCode(StatusCodes.Status200OK, _quotesDbContext.Quote);
         }
 
         // GET: api/Quotes/5
         [HttpGet("{id}", Name = "Get")]
-        public Quote Get(int id)
+        public IActionResult Get(int id)
         {
             var quote = _quotesDbContext.Quote.Find(id);
-            return quote;
+            if (quote == null)
+            {
+                return NotFound("Quote Not Found");
+            }
+            else { return StatusCode(StatusCodes.Status200OK, quote); }
+
         }
 
         // POST: api/Quotes
         [HttpPost]
-        public void Post([FromBody] Quote quote)
+        public IActionResult Post([FromBody] Quote quote)
         {
             _quotesDbContext.Quote.Add(quote);
             _quotesDbContext.SaveChanges();
+            return StatusCode(StatusCodes.Status201Created);
         }
 
         // PUT: api/Quotes/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Quote quote)
+        public IActionResult Put(int id, [FromBody] Quote quote)
         {
             var entity = _quotesDbContext.Quote.Find(id);
+            if (entity==null)
+            {
+                return StatusCode(StatusCodes.Status404NotFound);
+            }
             entity.Title = quote.Title;
             entity.Author = quote.Author;
             entity.Description = quote.Description;
             _quotesDbContext.SaveChanges();
+            return Ok("Record Updated Successfully!!");
 
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
             var entity = _quotesDbContext.Quote.Find(id);
+            if (entity == null)
+            {
+                return StatusCode(StatusCodes.Status404NotFound);
+            }
             _quotesDbContext.Quote.Remove(entity);
             _quotesDbContext.SaveChanges();
+            return Ok("Record Deleted Successfully!!");
+
         }
     }
 }
