@@ -57,11 +57,13 @@ namespace QuotesAPI.Controllers
             var entity = _quotesDbContext.Quote.Find(id);
             if (entity==null)
             {
-                return StatusCode(StatusCodes.Status404NotFound);
+                return NotFound("Record Not Found!!");
             }
             entity.Title = quote.Title;
             entity.Author = quote.Author;
             entity.Description = quote.Description;
+            entity.QuoteType = quote.QuoteType;
+            entity.CreatedDate = quote.CreatedDate;
             _quotesDbContext.SaveChanges();
             return Ok("Record Updated Successfully!!");
 

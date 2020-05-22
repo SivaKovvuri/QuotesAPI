@@ -6,6 +6,12 @@
 
   <ItemGroup>
     <Compile Remove="Data\QuotesDbContext.cs" />
+    <Compile Remove="Migrations\20200521131355_Added_CreatedDate.cs" />
+    <Compile Remove="Migrations\20200521131355_Added_CreatedDate.Designer.cs" />
+    <Compile Remove="Migrations\20200521132052_Added_CreatedDate.cs" />
+    <Compile Remove="Migrations\20200521132052_Added_CreatedDate.Designer.cs" />
+    <Compile Remove="Migrations\20200521132147_Added_CreatedDate.cs" />
+    <Compile Remove="Migrations\20200521132147_Added_CreatedDate.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
