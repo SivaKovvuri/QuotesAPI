@@ -41,7 +41,7 @@ namespace QuotesAPI.Controllers
         }
 
 
-        // GET: api/Quotes
+        // GET: api/Quotes/PageQuote
         [HttpGet("[action]")]
         public IActionResult PageQuote(int? pageNumber,int? pageSize)
         {
@@ -53,6 +53,14 @@ namespace QuotesAPI.Controllers
 
 
             return Ok(quote);
+        }
+
+        // GET: api/Quotes/QuoteSearch
+        [HttpGet("[action]")]
+        public IActionResult QuoteSearch(string type)
+        {
+            var quotes = _quotesDbContext.Quote.Where(x => x.QuoteType.Contains(type));
+            return Ok(quotes);
         }
 
         // GET: api/Quotes/5
