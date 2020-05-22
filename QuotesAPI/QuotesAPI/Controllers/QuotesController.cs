@@ -22,10 +22,37 @@ namespace QuotesAPI.Controllers
 
         // GET: api/Quotes
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get(string sort)
         {
-            // return Ok(_quotesDbContext.Quote);
-            return StatusCode(StatusCodes.Status200OK, _quotesDbContext.Quote);
+            IQueryable<Quote> quote;
+            switch (sort)
+            {
+                case "asc":
+                   quote= _quotesDbContext.Quote.OrderBy(x=>x.CreatedDate);
+                    break;
+                case "desc":
+                     quote=_quotesDbContext.Quote.OrderByDescending(x => x.CreatedDate);
+                    break;
+                default:
+                     quote=_quotesDbContext.Quote;
+                    break;
+            }
+            return Ok(quote);
+        }
+
+
+        // GET: api/Quotes
+        [HttpGet("[action]")]
+        public IActionResult PageQuote(int? pageNumber,int? pageSize)
+        {
+            var currentPageNumber = pageNumber ?? 1;
+            var currentPageSize = pageSize ?? 5;
+
+            IQueryable
+                <Quote> quote = _quotesDbContext.Quote.Skip(currentPageNumber - 1).Take(currentPageSize);
+
+
+            return Ok(quote);
         }
 
         // GET: api/Quotes/5
