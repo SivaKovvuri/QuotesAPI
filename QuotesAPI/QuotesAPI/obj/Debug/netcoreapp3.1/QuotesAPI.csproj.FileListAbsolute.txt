@@ -100,7 +100,6 @@ F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\bin\Debug\netcoreapp3.1\runtimes\
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\QuotesAPI.MvcApplicationPartsAssemblyInfo.cache
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\QuotesAPI.AssemblyInfoInputs.cache
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\QuotesAPI.AssemblyInfo.cs
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\QuotesAPI.RazorTargetAssemblyInfo.cache
@@ -110,4 +109,4 @@ F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\staticweb
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\QuotesAPI.dll
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\QuotesAPI.pdb
 F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\QuotesAPI.genruntimeconfig.cache
-F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\QuotesAPI.csprojAssemblyReference.cache
+F:\API\QuotesAPI\QuotesAPI\QuotesAPI\QuotesAPI\obj\Debug\netcoreapp3.1\QuotesAPI.MvcApplicationPartsAssemblyInfo.cache
